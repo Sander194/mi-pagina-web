@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me amas miniña?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6a0dad; /* Fondo morado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: black; /* Pregunta en negro */
+            font-size: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        #siButton {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336; /* Rojo */
+            color: white;
+            position: relative;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me amas miniña?</h1>
+        <button id="siButton" onclick="window.location.href='file:///C:/Users/Sander/Desktop/San%20Valentin%20%F0%9F%92%9C/Feliz%20San%20Valentin.html';">Sí</button>
+        <button id="noButton" onclick="moverNo()">No</button>
+    </div>
+
+    <script>
+        function moverNo() {
+            // Obtener el botón de "No"
+            const noButton = document.getElementById('noButton');
+
+            // Generar valores aleatorios para mover el botón
+            const randomX = Math.floor(Math.random() * 200) - 100; // Mueve entre -100px y 100px
+            const randomY = Math.floor(Math.random() * 200) - 100; // Mueve entre -100px y 100px
+
+            // Aplicar la nueva posición al botón de "No"
+            noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+    </script>
+</body>
+</html>
